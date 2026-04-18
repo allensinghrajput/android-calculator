@@ -1,0 +1,31 @@
+<resources>
+
+    <style name="BaseBtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_columnWeight">1</item>
+
+        <!-- IMPORTANT: REMOVE FIXED HEIGHT -->
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:background">@drawable/btn_circle</item>
+    </style>
+
+    <style name="OrangeBtn" parent="BaseBtn">
+        <item name="android:backgroundTint">@color/orange</item>
+        <item name="backgroundTint">@color/orange</item>
+    </style>
+
+    <style name="GrayBtn" parent="BaseBtn">
+        <item name="android:backgroundTint">@color/light_gray</item>
+        <item name="backgroundTint">@color/light_gray</item>
+    </style>
+
+    <style name="DarkBtn" parent="BaseBtn">
+        <item name="android:backgroundTint">@color/dark_gray</item>
+        <item name="backgroundTint">@color/dark_gray</item>
+    </style>
+
+</resources>

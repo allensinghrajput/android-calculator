@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="2dp">
+
+    <!-- DISPLAY AREA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|end"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvExpression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/expression_gray"
+            android:textSize="28sp"
+            android:gravity="end"/>
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="96sp"
+            android:gravity="end"
+            android:maxLines="1"
+            android:ellipsize="start"/>
+    </LinearLayout>
+
+    <!-- BUTTON GRID -->
+    <GridLayout
+        android:id="@+id/buttonGrid"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4">
+
+        <!-- Row 1 -->
+        <Button style="@style/GrayBtn" android:text="DEL" android:onClick="onDeleteClick"/>
+        <Button style="@style/GrayBtn" android:text="AC" android:onClick="onClearClick"/>
+        <Button style="@style/GrayBtn" android:text="%" android:onClick="onPercentClick"/>
+        <Button style="@style/OrangeBtn" android:text="÷" android:onClick="onOperatorClick"/>
+
+        <!-- Row 2 -->
+        <Button style="@style/DarkBtn" android:text="7" android:onClick="onNumberClick"/>
+        <Button style="@style/DarkBtn" android:text="8" android:onClick="onNumberClick"/>
+        <Button style="@style/DarkBtn" android:text="9" android:onClick="onNumberClick"/>
+        <Button style="@style/OrangeBtn" android:text="×" android:onClick="onOperatorClick"/>
+
+        <!-- Row 3 -->
+        <Button style="@style/DarkBtn" android:text="4" android:onClick="onNumberClick"/>
+        <Button style="@style/DarkBtn" android:text="5" android:onClick="onNumberClick"/>
+        <Button style="@style/DarkBtn" android:text="6" android:onClick="onNumberClick"/>
+        <Button style="@style/OrangeBtn" android:text="-" android:onClick="onOperatorClick"/>
+
+        <!-- Row 4 -->
+        <Button style="@style/DarkBtn" android:text="1" android:onClick="onNumberClick"/>
+        <Button style="@style/DarkBtn" android:text="2" android:onClick="onNumberClick"/>
+        <Button style="@style/DarkBtn" android:text="3" android:onClick="onNumberClick"/>
+        <Button style="@style/OrangeBtn" android:text="+" android:onClick="onOperatorClick"/>
+
+        <!-- Row 5 -->
+        <Button style="@style/DarkBtn" android:text="+/-" android:onClick="onSignChangeClick"/>
+        <Button style="@style/DarkBtn" android:text="0" android:onClick="onNumberClick"/>
+        <Button style="@style/DarkBtn" android:text="." android:onClick="onNumberClick"/>
+        <Button style="@style/OrangeBtn" android:text="=" android:onClick="onEqualClick"/>
+
+    </GridLayout>
+
+</LinearLayout>
